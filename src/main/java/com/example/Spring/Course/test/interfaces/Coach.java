@@ -1,4 +1,4 @@
-package test.interfaces;
+package com.example.Spring.Course.test.interfaces;
 
 public interface Coach {
     String startup();

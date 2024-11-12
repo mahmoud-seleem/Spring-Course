@@ -1,10 +1,13 @@
-package test.services;
+package com.example.Spring.Course.test.services;
 
-import test.interfaces.Coach;
-import test.interfaces.Service;
-
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import com.example.Spring.Course.test.interfaces.Coach;
+import com.example.Spring.Course.test.interfaces.Service;
+@Component(value = "myCoach")
 public class FootballCoach implements Coach {
 
+    @Autowired
     private Service fortuneService;
     private String name;
     public FootballCoach(){
