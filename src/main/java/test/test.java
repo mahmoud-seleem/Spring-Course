@@ -3,6 +3,7 @@ package test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import test.interfaces.Coach;
 import test.interfaces.Service;
+import test.services.FootballCoach;
 
 public class test {
     public static void main(String[] args) {
@@ -12,5 +13,6 @@ public class test {
         Coach coach = context.getBean("myCoach",Coach.class);
         System.out.println(coach.callService());
         System.out.println(service.getService());
+        System.out.println(((FootballCoach)coach).getName());
     }
 }
