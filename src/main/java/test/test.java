@@ -14,5 +14,6 @@ public class test {
         System.out.println(coach.callService());
         System.out.println(service.getService());
         System.out.println(((FootballCoach)coach).getName());
+        context.close();
     }
 }

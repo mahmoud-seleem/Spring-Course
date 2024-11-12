@@ -19,6 +19,19 @@ public class FootballCoach implements Coach {
     public String getName(){
         return this.name;
     }
+
+    @Override
+    public String startup() {
+        System.out.println("Bean is initialized now !!");
+        return "starting";
+    }
+
+    @Override
+    public String shutdown() {
+        System.out.println("Bean is going out of spring scope !!");
+        return "shutting down";
+    }
+
     public String callService(){
         return fortuneService.getService();
     }

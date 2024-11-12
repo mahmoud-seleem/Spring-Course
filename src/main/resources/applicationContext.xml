@@ -10,7 +10,10 @@
     <context:property-placeholder location="classpath:application.properties"/>
     <bean id="myFortuneService" class="test.services.FortuneService">
     </bean>
-    <bean id="myCoach" class="test.services.FootballCoach">
+    <bean id="myCoach"
+          class="test.services.FootballCoach"
+          init-method="startup"
+          destroy-method="shutdown">
         <property name="fortuneService" ref="myFortuneService"/>
         <property name="name" value="${coach.name}"/>
     </bean>
