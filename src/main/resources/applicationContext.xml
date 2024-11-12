@@ -10,6 +10,6 @@
     <bean id="myFortuneService" class="test.services.FortuneService">
     </bean>
     <bean id="myCoach" class="test.services.FootballCoach">
-        <constructor-arg ref="myFortuneService"/>
+        <property name="fortuneService" ref="myFortuneService"/>
     </bean>
 </beans>
