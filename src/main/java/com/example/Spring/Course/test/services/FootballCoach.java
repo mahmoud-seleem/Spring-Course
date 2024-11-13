@@ -38,4 +38,8 @@ public class FootballCoach implements Coach {
     public String callService(){
         return fortuneService.getService();
     }
+
+    public Service getFortuneService() {
+        return this.fortuneService;
+    }
 }
