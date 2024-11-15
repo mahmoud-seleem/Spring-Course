@@ -18,7 +18,7 @@ if os.path.isdir(directory):
     new_contents = []
     for index in sorted_list.values():
         new_contents.append(contents[index])
-    for content in new_contents[:10]:
+    for content in new_contents[10:11]:
         path = directory + os.path.sep + content
         print(path)
         if (os.path.isdir(path)):
